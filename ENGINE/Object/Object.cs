@@ -2,17 +2,18 @@ using System.Numerics;
 
 public class Object
 {
-	List<Component> Components = new List<Component>(50);
-	Vector2 Position = Vector2.Zero;
+	protected List<Component> Components = new List<Component>(50);
+	protected Vector2 Position = Vector2.Zero;
 
 	public void Start()
 	{
+		this._ObjectStart();
+
 		for (int i = 0; i < Components.Count; i++)
 		{
 			Components.ElementAt(i).ParentObject = this;
 			Components.ElementAt(i).Start();
 		}
-		this._ObjectStart();
 	}
 	public virtual void _ObjectStart() { }
 

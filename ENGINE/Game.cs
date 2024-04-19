@@ -1,11 +1,11 @@
 public static class Game
 {
-	public static double SecondsPerTick;
+	public static int TicksPerSecond;
 	static List<Object> Objects = new List<Object>(100);
 
 	public static void Start()
 	{
-		Objects.Add(new Object());
+		Objects.Add(new Player());
 
 		for (int i = 0; i < Objects.Count; i++)
 		{
