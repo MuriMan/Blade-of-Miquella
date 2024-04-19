@@ -41,14 +41,14 @@ public class AnimationComponent : Component
 	{
 		Animation animation = findAnimationWithName(animName);
 
-		if (frame % (60/Animation.FRAMERATE) == 0)
-			this.CurrentFrame = animation.Frames[frame / (60/Animation.FRAMERATE)];
+		if (frame % (Game.TICKS_PER_SECOND/Animation.FRAMERATE) == 0)
+			this.CurrentFrame = animation.Frames[frame / (Game.TICKS_PER_SECOND/Animation.FRAMERATE)];
 
 		frame++;
-		if (frame >= animation.Frames.Length * (60/Animation.FRAMERATE))
+		if (frame >= animation.Frames.Length * (Game.TICKS_PER_SECOND/Animation.FRAMERATE))
 			frame = 0;
 
-		// NOTE: 60 IS THE TICK RATE
+		// NOTE: Game.TicksPerSecond IS THE TICK RATE
 	}
 
 	private Animation findAnimationWithName(string name)

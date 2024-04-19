@@ -13,12 +13,12 @@ Game.Start();
 while (!WindowShouldClose())
 {
 	Game.Update(GetFrameTime());
-	Game.TicksPerSecond = 60;
+	Game.TICKS_PER_SECOND = 60;
 
 	double tickTimer = GetFrameTime();
-	while (tickTimer >= (double)1/Game.TicksPerSecond)
+	while (tickTimer >= (double)1/Game.TICKS_PER_SECOND)
 	{
-		tickTimer -= (double)1/Game.TicksPerSecond;
+		tickTimer -= (double)1/Game.TICKS_PER_SECOND;
 		Game.Tick(GetFrameTime());
 	}
 
