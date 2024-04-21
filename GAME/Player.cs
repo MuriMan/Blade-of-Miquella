@@ -54,6 +54,5 @@ public class PlayerPhysicsComponent : PhysicsComponent
 
 	public override void _ResolveCollision(PhysicsComponent collider)
 	{
-		Console.WriteLine("HI");
 	}
 }

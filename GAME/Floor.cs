@@ -22,9 +22,4 @@ public class Floor : Object
 		this.Components.Add(this.CollisionRect);
 		this.Components.Add(this.PhysicsComponent);
 	}
-
-	public override void _ObjectDraw()
-	{
-		DrawRectangleV(this.Position, this.CollisionRect.Rect, Color.White);
-	}
 }

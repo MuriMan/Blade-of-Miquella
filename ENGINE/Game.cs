@@ -13,6 +13,23 @@ public static class Game
 		Objects.Add(new CollisionHandler());
 		COLLISION_HANDLER = Objects.ElementAt(0) as CollisionHandler;
 
+		int [,] tilemap = {
+			{1,1,1,1,1,1,1,1,1,1},
+			{1,1,1,1,1,1,1,1,1,1},
+			{1,1,1,1,1,1,1,1,1,1},
+			{1,1,1,1,1,1,1,1,1,1},
+			{1,1,1,1,1,1,1,1,1,1},
+			{1,1,1,1,1,1,1,1,1,1},
+			{1,1,1,1,1,1,1,1,1,1},
+			{1,1,1,1,1,1,1,1,1,1},
+			{1,1,1,1,1,1,1,1,1,1},
+			{1,1,1,1,1,1,1,1,1,1},
+		};
+		Objects.Add(new TileMap(
+			new Tile[]{ new Tile("RES/Kenney/tile_0000.png", true) },
+			tilemap
+		));
+
 		Objects.Add(new Player(new Vector2(0, 0)));
 		Objects.Add(new Floor());
 
