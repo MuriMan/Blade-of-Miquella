@@ -7,24 +7,24 @@ public class Floor : Object
 	CollisionRect CollisionRect;
 	PhysicsComponent PhysicsComponent;
 
-	// public Floor(Vector2 pos)
-	// {
-	// 	this.Position = pos;
-	// }
-
 	public override void _ObjectStart()
 	{
+		this.Position = new Vector2(0, 50);
+
 		this.CollisionRect = new CollisionRect(
-			new Vector2(450, 10), this.Position
+			new Vector2(800, 100),
+			this.Position
 		);
 		this.PhysicsComponent = new PhysicsComponent(
 			this.CollisionRect
 		);
 
+		this.Components.Add(this.CollisionRect);
+		this.Components.Add(this.PhysicsComponent);
 	}
 
-	public override void _ObjectUpdate(float deltaTime)
+	public override void _ObjectDraw()
 	{
-		Console.WriteLine(CollisionRect == null);
+		DrawRectangleV(this.Position, this.CollisionRect.Rect, Color.White);
 	}
 }

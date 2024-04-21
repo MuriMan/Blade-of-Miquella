@@ -14,8 +14,7 @@ public static class Game
 		COLLISION_HANDLER = Objects.ElementAt(0) as CollisionHandler;
 
 		Objects.Add(new Player(new Vector2(0, 0)));
-		Objects.Add(new Player(new Vector2(0, 5)));
-		// Objects.Add(new Floor());
+		Objects.Add(new Floor());
 
 		for (int i = 0; i < Objects.Count; i++)
 		{

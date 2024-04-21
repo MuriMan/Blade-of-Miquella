@@ -30,6 +30,7 @@ public class Player : Object
 		this.PhysicsComponent = new PlayerPhysicsComponent(
 			this.CollisionRect
 		);
+		this.PhysicsComponent.Acceleration = new Vector2(0, 10);
 
 		this.Components.Add(this.AnimationComponent);
 		this.Components.Add(this.CollisionRect);

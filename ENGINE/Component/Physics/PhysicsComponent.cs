@@ -7,7 +7,7 @@ public class PhysicsComponent : Component
 	public string hi = "HI";
 
 	public Vector2 Velocity = Vector2.Zero;
-	public Vector2 Acceleration = new Vector2(0, 10);
+	public Vector2 Acceleration = new Vector2(0, 0);
 
 	public CollisionRect Rect;
 
