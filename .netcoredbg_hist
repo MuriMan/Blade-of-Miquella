@@ -5,3 +5,64 @@ list Main.cs
 break Main.cs:2
 r
 quit
+b CollisionHandler.cs:10
+r
+frame
+list
+p PhysicsComponents
+p PhysicsComponents.ElementAt(0)
+p PhysicsComponents.ElementAt(1)
+quit
+b Game.cs:16
+r
+s
+list
+next
+list
+next
+frame
+l
+s
+l
+s
+l
+p Objects.ElementAt(1)
+p Objects.ElementAt(0)
+p Objects.ElementAt(1)
+s
+list
+s
+list
+fin
+finish
+s
+list
+p Objects.ElementAt(0)
+p Objects.ElementAt(1)
+p Objects.ElementAt(2)
+s
+list
+s
+list
+s
+list
+finish
+s
+list
+finish
+list
+s
+list
+p Objects.ElementAt(1)
+p Objects.ElementAt(2)
+s
+list
+s
+list
+s
+c
+list
+r
+cls
+detach
+quit

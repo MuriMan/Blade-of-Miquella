@@ -3,7 +3,7 @@ using System.Numerics;
 public class Object
 {
 	protected List<Component> Components = new List<Component>(50);
-	protected Vector2 Position = Vector2.Zero;
+	public Vector2 Position = Vector2.Zero;
 
 	public void Start()
 	{
