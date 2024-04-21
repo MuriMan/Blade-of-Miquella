@@ -1,2 +1,2 @@
-# ENGINE
-A structure on top of Raylib for game development
+# Blade of Miquella
+A game running off Raylib and some unnecessarily complicated structures.
