@@ -1,6 +1,7 @@
 public static class Game
 {
 	public static int TICKS_PER_SECOND;
+	public static double SECONDS_PER_TICK;
 	static List<Object> Objects = new List<Object>(100);
 
 	public static void Start()
