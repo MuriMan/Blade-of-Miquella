@@ -6,32 +6,9 @@ public static class Game
 	public static double SECONDS_PER_TICK;
 	static List<Object> Objects = new List<Object>(100);
 
-	public static CollisionHandler? COLLISION_HANDLER;
-
 	public static void Start()
 	{
-		Objects.Add(new CollisionHandler());
-		COLLISION_HANDLER = Objects.ElementAt(0) as CollisionHandler;
-
-		int [,] tilemap = {
-			{1,1,1,1,1,1,1,1,1,1},
-			{1,1,1,1,1,1,1,1,1,1},
-			{1,1,1,1,1,1,1,1,1,1},
-			{1,1,1,1,1,1,1,1,1,1},
-			{1,1,1,1,1,1,1,1,1,1},
-			{1,1,1,1,1,1,1,1,1,1},
-			{1,1,1,1,1,1,1,1,1,1},
-			{1,1,1,1,1,1,1,1,1,1},
-			{1,1,1,1,1,1,1,1,1,1},
-			{1,1,1,1,1,1,1,1,1,1},
-		};
-		Objects.Add(new TileMap(
-			new Tile[]{ new Tile("RES/Kenney/tile_0000.png", true) },
-			tilemap
-		));
-
 		Objects.Add(new Player(new Vector2(0, 0)));
-		Objects.Add(new Floor());
 
 		for (int i = 0; i < Objects.Count; i++)
 		{

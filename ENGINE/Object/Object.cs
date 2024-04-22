@@ -2,7 +2,7 @@ using System.Numerics;
 
 public class Object
 {
-	protected List<Component> Components = new List<Component>(50);
+	protected List<Component> Components = new List<Component>(100);
 	public Vector2 Position = Vector2.Zero;
 
 	public void Start()
@@ -20,7 +20,12 @@ public class Object
 	public void Update(float deltaTime)
 	{
 		for (int i = 0; i < Components.Count; i++)
+		{
+			if (Components.ElementAt(i).ParentObject == null)
+				Components.ElementAt(i).ParentObject = this;
+
 			Components.ElementAt(i).Update(deltaTime);
+		}
 
 		this._ObjectUpdate(deltaTime);
 	}

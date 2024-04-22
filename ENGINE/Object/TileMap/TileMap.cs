@@ -26,6 +26,7 @@ public class TileMap : Object
 		this.Map = map;
 	}
 
+	bool firstPass = true;
 	public override void _ObjectDraw()
 	{
 		Vector2 drawPos = new Vector2(0, 0);
@@ -35,10 +36,18 @@ public class TileMap : Object
 			for (int j = 0; j < 10; j++)
 			{
 				DrawTextureV(this.Tileset[this.Map[i, j] - 1].Texture, drawPos, Color.White);
+				
+				if (this.Tileset[this.Map[i, j] - 1].IsCollidable && firstPass)
+				{
+				}
+
 				drawPos += new Vector2(18, 0);
 			}
 			drawPos = new Vector2(0, drawPos.Y);
 			drawPos += new Vector2(0, 18);
 		}
+
+		if (firstPass)
+			firstPass = false;
 	}
 }
