@@ -25,4 +25,10 @@ public class Component
 		this._ComponentDraw();
 	}
 	public virtual void _ComponentDraw() { }
+
+	public void Draw2D()
+	{
+		this._ComponentDraw2D();
+	}
+	public virtual void _ComponentDraw2D() { }
 }

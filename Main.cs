@@ -1,8 +1,8 @@
 ﻿using Raylib_cs;
 using static Raylib_cs.Raylib;
 
-const int SCREEN_WIDTH = 450;
-const int SCREEN_HEIGHT = 800;
+const int SCREEN_WIDTH = 800;
+const int SCREEN_HEIGHT = 450;;
 
 InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "GAME");
 SetTargetFPS(60);
@@ -26,6 +26,10 @@ while (!WindowShouldClose())
 	BeginDrawing();
 		ClearBackground(Color.Black);
 		Game.Draw();
+
+		BeginMode2D(Game.Camera);
+			Game.Draw2D();
+		EndMode2D();
 	EndDrawing();
 }
 
