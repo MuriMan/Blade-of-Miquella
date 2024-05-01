@@ -8,10 +8,10 @@ public static class Game
 
 	public static Camera2D Camera = new Camera2D(new Vector2(1024/2, 512/2), new Vector2(0, 0), 0, 1.0f);
 
-	static Scene[] Scenes = {
+	public static Scene[] Scenes = {
 		new World()
 	};
-	static Scene CurrentScene = Scenes[0];
+	public static Scene CurrentScene = Scenes[0];
 
 	public static void Start()
 	{
