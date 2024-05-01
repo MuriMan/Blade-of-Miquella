@@ -1,0 +1,2 @@
+screen dimensions:
+1024 x 512; true dimensions 256 x 128; scaled x4

@@ -1,8 +1,8 @@
 ﻿using Raylib_cs;
 using static Raylib_cs.Raylib;
 
-const int SCREEN_WIDTH = 800;
-const int SCREEN_HEIGHT = 450;;
+const int SCREEN_WIDTH = 1024;
+const int SCREEN_HEIGHT = 512;
 
 InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "GAME");
 SetTargetFPS(60);

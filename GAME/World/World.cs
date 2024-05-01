@@ -4,7 +4,7 @@ using Raylib_cs;
 public class World : Scene
 {
 	Player Player = new Player(
-		new Vector2(-400, 0)
+		new Vector2(0, 0)
 	);
 
 	public override void _InitialiseScene()
