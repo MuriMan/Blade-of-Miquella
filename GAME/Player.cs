@@ -11,8 +11,9 @@ public class Player : Object
 		this.Position = pos;
 	}
 
-	public override void _ObjectDraw2D()
+	public override void _ObjectStart()
 	{
-		DrawRectangleV(this.Position, new Vector2(10, 30), Color.White);
+		this.Components.Add(new CollisionComponent(new Rectangle(this.Position, new Vector2(10, 30))));
+		this.Components.Add(new PhysicsComponent(this.Components[0] as CollisionComponent));
 	}
 }

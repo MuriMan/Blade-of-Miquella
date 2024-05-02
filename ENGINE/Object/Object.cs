@@ -1,6 +1,7 @@
 public class Object
 {
 	protected List<Component> Components = new List<Component>(100);
+	public Scene? ParentScene;
 
 	public void Start()
 	{
